@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding</title>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh; /* Full height */
+        margin: 0;
+        background-color: #f4f4f4; /* Light background */
+    }
+    
+    .header{
+        position: fixed;
+        margin:0;
+        top: 0;
+        right: 0;
+        left: 0;
+        color: rgb(7, 7, 7);
+        height: 70px;
+        background-color: #eb2463;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .header a {
+        position: absolute;
+        right: 20px;
+        color: rgb(4, 31, 238);
+    }
+    
+    .content{
+        border: 2px solid rgb(57, 252, 3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 100px;
+        padding: 20px;
+        width: 500px;
+        background: rgb(221, 188, 188);
+        box-shadow: 5px 5px 15px rgba(235, 4, 4, 0.1);
+        border-radius: 10px;
+    }
+    
+    .structured{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .structured button{
+        padding: 10px 15px;
+        border: none;
+        background-color: #d5ef0d;
+        color: rgb(10, 10, 10);
+        font-size: 16px;
+        width: 125px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+    }
+    
+    .structured button:hover {
+        background-color: #0056b3;
+    }
+    
+    
+    
+    .unstructured{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .unstructured button{
+        padding: 10px 15px;
+        border: none;
+        background-color: #eaff00;
+        color: rgb(15, 15, 15);
+        font-size: 16px;
+        width: 125px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+    }
+    
+    .unstructured button:hover {
+        background-color: #0056b3;
+    }
+    .display-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 100px;
+        padding: 20px;
+        width: 500px;
+        background: white;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        color: #eb62b0;
+    }
+</style>
+</head>
+<body class="body">
+    <header class="header">
+        <h1>CODING</h1>
+        <a href="index.html"><button>HOME</button></a>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="structured">
+                <h4>Structured Programming Languages</h4>
+                <button onclick="showContent('c')">C</button>
+                <button onclick="showContent('cpp')">C++</button>
+                <button onclick="showContent('java')">JAVA</button>
+                <button onclick="showContent('python')">PYTHON</button>
+            </div>
+
+            <div class="unstructured">
+                <h4>Unstructured Programming Languages</h4>
+                <button onclick="showContent('html')">HTML</button>
+                <button onclick="showContent('css')">CSS</button>
+                <button onclick="showContent('javascript')">JAVASCRIPT</button>
+            </div>
+        </div>
+        
+        <div id="display" class="display-box">
+            <p>Select a language to see details.</p>
+        </div>
+    </div>
+
+    <script>
+        function showContent(language) {
+            const content = {
+                c: "C is a procedural programming language developed by Dennis Ritchie.The C programming language is a procedural and general-purpose language that provides low-level access to system memory. A program written in C must be run through a C compiler to convert it into an executable that a computer can run.<a href='https://www.w3schools.com/c/c_intro.php' target='_blank'>Learn More</a>",
+                cpp: "C++ is a powerful, general-purpose, object-oriented programming language created by Bjarne Stroustrup as an extension of the C language, known for its speed, efficiency, and control over system resources, making it suitable for a wide range of application.<a href='https://www.w3schools.com/cpp/default.asp' target='_blank'>Learn More</a>",
+                java: "Java is a high-level, versatile, and object-oriented programming language developed by Sun Microsystems in 1995, now owned by Oracle Corporation. It’s designed to be platform-independent, meaning Java code can run anywhere with the help of the Java Virtual Machine (JVM)..<a href='https://www.w3schools.com/java/default.asp' target='_blank'>Learn More</a>",
+                python: "Python is a high-level, general-purpose programming language known for its readability and simplicity, widely used in web development, data science, machine learning, and more.<a href='https://www.w3schools.com/python/default.asp' target='_blank'>Learn More</a>",
+                html: "HTML, which stands for HyperText Markup Language, is a markup language used to structure and present content on the World Wide Web. It uses tags to define elements like headings, paragraphs, images, and links, instructing web browsers how to display web pages. <a href='https://www.w3schools.com/html/default.asp' target='_blank'>Learn More</a>",
+                css: "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.<a href='https://www.w3schools.com/css/default.asp' target='_blank'>Learn More</a>",
+                javascript: "JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes and classes.<a href='https://www.w3schools.com/js/default.asp' target='_blank'>Learn More</a>"
+            };
+
+            document.getElementById("display").innerHTML = `<p>${content[language]}</p>`;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        body{
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .header{
+            position: fixed;
+            margin: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+            color: #080808;
+            height: 70px;
+            background:skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(55, 0, 255, 0.5);
+
+        }
+        
+        
+        .bot{
+            
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        button{
+            background-color: rgb(224, 101, 0);
+            height: 30px;
+            width: 50px;
+            color: rgb(66, 245, 12);
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            border: none;
+        }
+        button:hover{
+            background:linear-gradient(100deg,#161414,#f70000);
+            transition: 5s background-color ease-in-out;  
+        }
+        button a{
+            text-decoration: none;
+            color: rgb(23, 122, 209);   
+        }
+       
+    </style>
+</head>
+<body>
+    <header class="header">TIME TABLE</header>
+    
+    <div class="bot">
+    <table border="2" style="text-align: center;">
+        <caption>VIIT(A) - Department Of Artificial Intelligence & Data Science</caption>
+        <caption>II B.TECH - II SEM: AY: 2024-2025 (2023 ADMITTED)</caption>
+        <tr>
+            
+            <td colspan="3"></td>
+            <td colspan="2">SECTION 2</td>
+            
+            <td colspan="4" style="text-align: right;">w.e.f:27.01.2025</td>
+            
+        </tr>
+        <tr>
+            <th>
+Time/
+Day</th>
+            <th>10:00-10:50</th>
+            <th>10:50-11:40</th>
+            <th>11:40-12:30</th>
+            <th>12:30-01:20</th>
+            <th>01:20-02:10</th>
+            <th>02:10-03:00</th>
+            <th>03:00-03:50</th>
+            <th>04:00-04:50</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td rowspan="7">LUNCH</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>MON</td>
+            <td colspan="2" style="background-color: rgb(64, 243, 64);">FULL STACK(AB-04)</td>
+            <td style="background-color: rgb(76, 229, 240);">SDS</td>
+            <td style="background-color: rgb(238, 49, 121);">PAI</td>
+            <td colspan="3" style="background-color: rgb(235, 175, 13);">IDS LAB(AB-05)</td>
+            
+        </tr>
+        <tr>
+            <td>TUE</td>
+            <td style="background-color: rgb(214, 63, 214);">DLCO</td>
+            <td style="background-color: rgb(238, 49, 121);">PAI</td>
+            <td colspan="2" style="color: white;background-color: rgba(36, 33, 33, 0.884);">IDT</td>
+            <td style="background-color: rgb(235, 175, 13);">IDS</td>
+            <td style="background-color: rgba(70, 80, 231, 0.705);">MEFA</td>
+            <td style="background-color: rgba(153, 151, 151, 0.911);">DLCO</td>
+        </tr>
+        <tr>
+            <td>WED</td>
+            <td colspan="2" style="background-color: rgb(241, 241, 34);">WEEKLY TEST</td>
+            <td style="background-color: rgba(70, 80, 231, 0.705);">MEFA</td>
+            <td style="background-color: rgb(235, 175, 13);">IDS</td>
+            <td style="background-color: rgb(238, 49, 121);">PAI</td>
+            <td style="background-color: rgb(214, 63, 214);">DLCO</td>
+            <td style="background-color: rgba(153, 151, 151, 0.911);">COUN</td>
+        </tr>
+        <tr>
+            <td>THU</td>
+            <td style="background-color: rgb(76, 229, 240);">SDS</td>
+            <td style="background-color: rgba(53, 228, 170, 0.815);">Vs</td>
+            <td style="background-color: rgb(214, 63, 214);">DLCO</td>
+            <td style="background-color: rgb(235, 175, 13);">IDS</td>
+            <td style="background-color: rgb(238, 49, 121);">PAI</td>
+            <td style="background-color: rgba(70, 80, 231, 0.705);">MEFA</td>
+            <td style="background-color: rgba(153, 151, 151, 0.911);">SPORTS</td>
+        </tr>
+        <tr>
+            <td>FRI</td>
+            <td style="background-color: rgba(70, 80, 231, 0.705);">MEFA</td>
+            <td style="background-color: rgb(76, 229, 240);">SDS</td>
+            <td style="background-color: rgb(238, 49, 121);">PAI</td>
+            <td style="background-color: rgb(235, 175, 13);">IDS</td>
+            <td colspan="3" style="background-color: rgb(238, 49, 121);">PAI LAB(AB-05)</td>
+        </tr>
+        <tr>
+            <td>SAT</td>
+            <td style="background-color: rgb(214, 63, 214);">DLCO</td>
+            <td style="background-color: rgba(15, 202, 226, 0.884);">IA</td>
+            <td style="background-color: rgb(76, 229, 240);">SDS</td>
+            <td style="background-color: rgb(235, 175, 13);">IDS</td>
+            <td style="background-color: rgb(76, 229, 240);">SDS</td>
+            <td style="background-color: rgba(70, 80, 231, 0.705);">MEFA</td>
+            <td style="background-color: rgba(153, 151, 151, 0.911);">LIB</td>
+        </tr>
+    </table>
+    <br><br>
+    <h3><button class="button" onclick="gohome()">Home</button></h3>
+    
+    </div>
+    <script>
+        function gohome()
+        {
+            window.location.href='./index.html';
+        }
+    </script>
+</body>
+</html>

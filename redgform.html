@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>REGISTRATION form</title>
+    <style>
+        input[type=text],input[type=passwod],input[type=EMAIL],input[type=password],input[type=address],input[type=button]{
+            width: 30%;
+            background-color: rgb(231, 237, 233);
+            margin: 0px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid rgb(248, 6, 171);
+            box-sizing: 50%;
+            align-items: center;
+        }
+        button{
+            background-color: #43d043d7;
+            color: rgb(244, 244, 247);
+            padding: 20px;
+            cursor: pointer;
+            pointer-events: stroke;
+            display:inline-block;
+        
+        }
+        
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+        div.form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .form-row {
+            display: flex;
+            align-items: center;
+            gap: 1px;
+            margin-bottom: 15px;
+        }
+        label {
+            width: 150px;
+            text-align: right;
+        }
+        input, select {
+            flex: 1;
+            max-width: 300px;
+        }
+        .radio-group {
+            display: flex;
+            gap:15px;
+        }
+
+        .submit, .reset {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+.submit {
+    background: linear-gradient(135deg, #28a745, #34d058);
+}
+
+.reset {
+    background: linear-gradient(135deg, #dc3545, #ff5f7e);
+}
+
+.submit:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+}
+
+.reset:hover {
+    background: linear-gradient(135deg, #c82333, #e63950);
+}
+       
+
+    </style>
+</head>
+<h3><button class="button" onclick="gohome()">Home</button></h3>
+<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;background-color: rgb(56, 219, 143);">
+    <h1 style="text-align: center;color:rgb(15, 34, 247);">REGISTRATION FORM</h1>
+    <br>
+    <br>
+    <form style="border: 3px solid #3825a1;">
+        <div style="padding: 25px;background-color:lightblue;">
+        <div class="form-row">
+            <label>FIRST NAME:</label>
+            <input type="text" name="FIRST NAME" maxlength="15" placeholder="FIRST NAME" required>
+        </div>
+        <div class="form-row">
+            <label>LAST NAME:</label>
+            <input type="text" name="LASTNAME" maxlength="15" placeholder="LASTNAME" required>
+        </div>
+        <div class="form-row">
+            <label>Qualification:</label>
+            <select>
+            <option value="10th">10th</option>
+            <option value="12th">12th</option>
+            <option value="Graduation"">Graduation</option>
+            <option value="Post Graduation">Post Graduation</option>
+            
+        </select>
+        </div>
+        <div class="form-row">
+            <label>Gender:</label>
+            <div class="radio-group">
+                Male<input type="radio" name="gender" >
+                Female<input type="radio" name="gender">
+            </div>
+        </div>
+        <div class="form-row">
+            <label>Phone:</label>
+            <input type="text" name="phone" value="+91:" maxlength="14">
+        </div>
+        <div class="form-row">
+            <label>EMAIL:</label>
+            <input type="email" placeholder="enter your email" required>
+        </div>
+        <div class="form-row">
+            <label>Password:</label>
+            <input type="password" placeholder="enter your password">
+        </div>
+        <div class="form-row">
+            <label>Re-enter Password:</label>
+            <input type="password" placeholder="re-enter your password">
+        </div>
+        <div class="form-row">
+            <label>Address:</label>
+            <input type="address" maxlength="50" placeholder="enter your address">
+        </div>
+         <div style="text-align: center; margin-top: 20px;">
+             <input type="submit"  class="submit">
+             <input type="reset" class="reset">
+         </div>
+
+        </div>
+    </form>
+    <script>
+        function gohome()
+        {
+            window.location.href='./index.html';
+        }
+    </script>
+</body>
+</html>

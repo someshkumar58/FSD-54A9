@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports Zone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    header {
+      background-color: #f27272;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      background-color: #46ec70;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0353a4;
+    }
+
+    .content {
+      max-width: 900px;
+      text-align: center;
+      margin-top: 30px;
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    p{
+        background-color:aqua;
+        color: #010802;
+    }
+    h1{
+        color: #0bf517;
+    }
+  </style>
+</head>
+<h3><button class="button" onclick="gohome()">Home</button></h3>
+<body>
+  <header>
+    <h1>Sports</h1>
+  </header>
+
+  <div class="container">
+    <div id="home">
+      <button class="btn" onclick="showContent('cricket')"> Cricket</button>
+      <button class="btn" onclick="showContent('badminton')">Badminton</button>
+    </div>
+    <div id="cricket" class="content">
+        <h1>🏏 Cricket</h1>
+      <div class="image-row">
+        <img src="cricket.webp" alt="logo">
+        <img src="msd sports.jpg" alt="pics">
+      </div>
+     <p>
+        Experience the thrill of cricket like never before with our engaging web-based cricket game. Built for browsers and optimized for all devices, this game captures the intensity and excitement of real-world cricket and transforms it into a fun, interactive experience you can enjoy anytime, anywhere.
+        <br><br>
+        Whether you're smashing boundaries, timing the perfect cover drive, or defending a tough total, every match feels alive with energy. Designed with smooth animations and intuitive controls, the game allows you to immerse yourself in the fast-paced action of T20 cricket or simulate the longer strategies of ODIs and Tests. You can bat, bowl, and even take on quick challenges that test your reflexes and decision-making.
+        <br><br>
+        For newcomers, the game offers a friendly learning curve, while experienced players can push for high scores and face increasingly tricky bowlers. With features like power-ups, custom avatars, multiple difficulty levels, and real-time score tracking, there's something for everyone. Compete with your friends, break records, and show off your cricketing skills!
+        <br><br>
+        Whether you're playing on your computer during a break or challenging yourself on mobile while commuting, our cricket game is your perfect dose of sporting fun. The crowd is cheering, the stumps are ready – all that's missing is you at the crease.<a href="https://en.wikipedia.org/wiki/Cricket" style="color: rgb(255, 47, 47);"><h2>learn more</h2></a>
+      </p>
+      <button class="btn" onclick="goHome()">⬅ Back</button>
+    </div>
+  
+
+    <div id="badminton" class="content">
+        <h1>🏸 Badminton</h1>
+        <div>
+            <div class="image-row">
+            <img src="badminton.webp" alt="game">
+            <img src="bbbbb.jpg" alt="game">
+        </div>
+     
+      <p>
+        Badminton is a high-energy racquet sport that combines speed, agility, and strategy. Played with a shuttlecock and a lightweight racquet, it’s one of the fastest racquet sports in the world — where reflexes and precision often determine the winner. The game can be played in singles or doubles formats, with players attempting to score points by landing the shuttlecock in the opponent’s court or forcing them into making errors.
+        One of the most fascinating aspects of badminton is its unique flight mechanics. Unlike a tennis ball, the shuttlecock is feathered and slows down rapidly after being hit, which creates interesting dynamics and requires excellent anticipation and footwork. Players must be constantly on their toes, ready to dash across the court, leap for a smash, or gently tap a deceptive drop shot over the net.
+        Matches are typically played indoors on a standard court, with games consisting of three sets of 21 points each. The fast-paced nature of the game, combined with the need for sharp thinking and quick movement, makes badminton both a physically demanding and mentally stimulating sport.
+        Globally, badminton has a massive following, especially in countries like China, India, Indonesia, Malaysia, Denmark, and South Korea. Legendary players such as Lin Dan, Lee Chong Wei, PV Sindhu, Carolina Marín, and Viktor Axelsen have elevated the sport with their skills and competitive spirit on the world stage, including the Olympics and BWF tournaments.
+        Beyond professional play, badminton is widely enjoyed as a recreational activity due to its accessibility and minimal equipment requirements. It promotes cardiovascular fitness, hand-eye coordination, and agility, making it a great sport for all ages. Whether played for fun or at a competitive level, badminton continues to inspire and energize millions around the world.<a href="https://en.wikipedia.org/wiki/Badminton" style="color: rgb(255, 47, 47);"><h2>learn more</h2></a>
+      </p>
+
+      <button class="btn" onclick="goHome()">⬅ Back</button>
+    </div>
+  </div>
+
+  <script>
+    function showContent(sport) {
+      document.getElementById("home").style.display = "none";
+      document.getElementById(sport).classList.add("active");
+    }
+
+    function goHome() {
+      document.getElementById("home").style.display = "block";
+      document.getElementById("cricket").classList.remove("active");
+      document.getElementById("badminton").classList.remove("active");
+    }
+  </script>
+   <script>
+    function gohome()
+    {
+        window.location.href='./index.html';
+    }
+</script>
+</body>
+</html>
